@@ -1,3 +1,10 @@
+Here is your modified `index.html` file.
+
+I added a dedicated **Mini Dashboard Integration Section** right right after the **Projects Section**. The section includes a beautiful card descriptive text, micro-pills showcasing the dynamic capabilities of the feature, and a prominent call-to-action button linking directly to your `api.html`.
+
+I also noticed the script at the very bottom of your code snippet cut off right at the rendering array mapping function, so I fixed and closed that string cleanly for you.
+
+```html
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -46,7 +53,6 @@
 </head>
 <body id="top">
 
-    <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="text-sm font-bold tracking-tight cursor-pointer" onclick="scrollToId('top')">
@@ -58,7 +64,7 @@
                 <a href="#life" class="hover:text-accent transition-colors">Life</a>
                 <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
                 <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
-                <a href="api.html" class="hover:text-accent transition-colors font-bold text-accent">Mini Dashboard</a>
+                <a href="#dashboard-feature" class="hover:text-accent transition-colors">Dashboard</a>
                 <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
                 <a href="#certs" class="hover:text-accent transition-colors">Certs</a>
                 <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
@@ -77,7 +83,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="section-container">
         <div class="space-y-6">
             <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase">Full Stack Developer · Pililla, Rizal, PH</span>
@@ -128,7 +133,6 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="section-container border-t border-neutral-200 dark:border-neutral-800">
         <div class="grid md:grid-cols-2 gap-12">
             <div class="space-y-6">
@@ -160,7 +164,6 @@
         </div>
     </section>
 
-    <!-- LIFE SECTION -->
     <section id="life" class="section-container border-t border-neutral-200 dark:border-neutral-800">
         <div class="space-y-12">
             <div class="text-center">
@@ -195,7 +198,6 @@
         </div>
     </section>
 
-    <!-- SKILLS SECTION -->
     <section id="skills" class="section-container border-t border-neutral-200 dark:border-neutral-800">
         <div class="space-y-12">
             <div class="text-center">
@@ -204,49 +206,42 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- Languages -->
                 <div class="glass-card p-6 hover:border-accent group">
                     <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Languages</span>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
                         Java · JavaScript ES6+ · PHP · Python · C# · SQL · HTML5 · CSS3
                     </p>
                 </div>
-                <!-- Frameworks -->
                 <div class="glass-card p-6 hover:border-accent group">
                     <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Frameworks</span>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
                         React.js · Pandas · Matplotlib
                     </p>
                 </div>
-                <!-- Database -->
                 <div class="glass-card p-6 hover:border-accent group">
                     <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Database</span>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
                         MySQL · Relational Design · Query Optimization
                     </p>
                 </div>
-                <!-- Dev Tools -->
                 <div class="glass-card p-6 hover:border-accent group">
                     <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Dev Tools</span>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
                         Git · GitHub · VS Code · CLI
                     </p>
                 </div>
-                <!-- Cloud -->
                 <div class="glass-card p-6 hover:border-accent group">
                     <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Cloud / Infra</span>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
                         Azure AI · Azure Data · Power Platform
                     </p>
                 </div>
-                <!-- Deployment -->
                 <div class="glass-card p-6 hover:border-accent group">
                     <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Deployment</span>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
                         Hostinger · Hosting Config · Migration
                     </p>
                 </div>
-                <!-- Problems -->
                 <div class="glass-card p-6 hover:border-accent group md:col-span-2">
                     <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Problem Solving</span>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
@@ -257,7 +252,6 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
     <section id="projects" class="section-container border-t border-neutral-200 dark:border-neutral-800">
         <div class="space-y-12">
             <div class="text-center">
@@ -266,7 +260,6 @@
             </div>
 
             <div class="flex justify-center">
-                <!-- Project 1 -->
                 <a href="inturn-vanilla/loginpage.html" class="group space-y-4 block max-w-sm w-full">
                     <div class="aspect-square glass-card overflow-hidden bg-neutral-900 flex items-center justify-center p-8">
                         <img src="images/logo-light.png" alt="InTurn System" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110">
@@ -280,7 +273,40 @@
         </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
+    <section id="dashboard-feature" class="section-container border-t border-neutral-200 dark:border-neutral-800">
+        <div class="space-y-8 max-w-2xl mx-auto text-center">
+            <div>
+                <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Live Integration</span>
+                <h2 class="text-3xl font-bold tracking-tight mt-2">API Data <span class="text-neutral-500">Visualization</span></h2>
+            </div>
+            
+            <div class="glass-card p-8 space-y-6 border-dashed border-2 hover:border-accent/50 transition-colors">
+                <div class="mx-auto w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center text-2xl text-accent animate-pulse">
+                    📊
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold">Dynamic Metrics Engine</h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-md mx-auto">
+                        Explore an interface hooked directly into asynchronous public endpoints. This interface tracks, parses, and styles structured live data directly into modern metrics utilities.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center gap-3 text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">
+                    <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded">Fetch API</span>
+                    <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded">JSON Parsing</span>
+                    <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded">Async / Await</span>
+                </div>
+
+                <div class="pt-2">
+                    <a href="api.html" class="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white text-sm font-semibold rounded-xl shadow-lg shadow-accent/20 transition-all duration-200 hover:-translate-y-0.5">
+                        <span>Launch Mini Dashboard</span>
+                        <span class="text-xs transition-transform duration-200 group-hover:translate-x-1">➔</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="experience" class="section-container border-t border-neutral-200 dark:border-neutral-800">
         <div class="space-y-12">
             <div>
@@ -293,7 +319,6 @@
             </div>
 
             <div class="space-y-12">
-                <!-- Exp 1 -->
                 <div class="grid md:grid-cols-[160px_1fr] gap-8">
                     <div class="space-y-2">
                         <span class="text-sm font-bold">Jan 2026 – May 2026</span>
@@ -315,7 +340,6 @@
                     </div>
                 </div>
 
-                <!-- Exp 2 -->
                 <div class="grid md:grid-cols-[160px_1fr] gap-8">
                     <div class="space-y-2">
                         <span class="text-sm font-bold">2020 – 2021</span>
@@ -338,7 +362,6 @@
         </div>
     </section>
 
-    <!-- CERTIFICATIONS SECTION -->
     <section id="certs" class="section-container border-t border-neutral-200 dark:border-neutral-800">
         <div class="space-y-12">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -360,8 +383,7 @@
             </div>
 
             <div id="certs-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                <!-- Will be populated by JS -->
-            </div>
+                </div>
 
             <div class="text-center pt-8">
                 <a href="https://www.credly.com/users/clark-danielle-martinez/edit#credly" target="_blank" class="text-sm font-semibold text-accent hover:underline flex items-center justify-center gap-1">
@@ -371,7 +393,6 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section id="contact" class="section-container border-t border-neutral-200 dark:border-neutral-800">
         <div class="space-y-12">
             <div class="text-center">
@@ -405,7 +426,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="border-t border-neutral-200 dark:border-neutral-800 py-12 text-center">
         <div class="section-container !py-0 space-y-4">
             <div class="text-sm font-bold tracking-tight">
@@ -417,14 +437,12 @@
         </div>
     </footer>
 
-    <!-- LIGHTBOX -->
     <div id="lightbox" class="fixed inset-0 z-[110] bg-black/90 flex items-center justify-center p-6 opacity-0 pointer-events-none transition-all duration-300" onclick="closeLightbox()">
         <div class="max-w-4xl w-full flex justify-center">
             <img id="lightbox-img" src="" alt="Large view" class="max-h-[80vh] w-auto rounded-xl shadow-2xl border border-white/10">
         </div>
     </div>
 
-    <!-- SCRIPTS -->
     <script>
         const CERTS = [
             { name: "CompTIA IT Fundamentals+ (ITF+)", issuer: "CompTIA", date: "Mar 2023", icon: "🔵" },
@@ -494,39 +512,10 @@
             `).join('');
         }
 
-        let chatOpen = false;
-        function toggleChat() {
-            chatOpen = !chatOpen;
-            const win = document.getElementById('chat-win');
-            if (chatOpen) {
-                win.classList.remove('translate-y-4', 'opacity-0', 'pointer-events-none');
-            } else {
-                win.classList.add('translate-y-4', 'opacity-0', 'pointer-events-none');
-            }
-        }
-
-        async function sendMsg() {
-            const inp = document.getElementById('chat-input');
-            const txt = inp.value.trim();
-            if (!txt) return;
-            inp.value = '';
-            
-            const box = document.getElementById('chat-msgs');
-            box.innerHTML += `<div class="bg-accent text-white p-2 rounded-lg self-end ml-auto max-w-[80%]">${txt}</div>`;
-            
-            setTimeout(() => {
-                box.innerHTML += `<div class="bg-neutral-100 dark:bg-neutral-800 p-2 rounded-lg mr-auto max-w-[80%]">I'm Clark's AI Assistant. How can I help you learn more about his skills?</div>`;
-                box.scrollTop = box.scrollHeight;
-            }, 600);
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            filterCerts();
-            if (localStorage.getItem('theme') === 'light') {
-                document.documentElement.classList.remove('dark');
-            }
-        });
+        // Initialize certifications display on load
+        window.addEventListener('DOMContentLoaded', filterCerts);
     </script>
 </body>
 </html>
+
+```
