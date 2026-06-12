@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark Martinez | Portfolio v3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: {
+                            DEFAULT: '#7c3aed',
+                            dark: '#6d28d9',
+                            light: '#a78bfa',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-neutral-50 text-neutral-900 dark:bg-[#0a0a0a] dark:text-neutral-100 transition-colors duration-300;
+            }
+        }
+        @layer components {
+            .section-container {
+                @apply max-w-4xl mx-auto px-6 py-16 md:py-24;
+            }
+            .glass-card {
+                @apply bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-sm transition-all duration-200;
+            }
+            .badge {
+                @apply px-3 py-1 rounded-full text-[11px] font-medium uppercase tracking-wider border transition-all;
+            }
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-sm font-bold tracking-tight cursor-pointer" onclick="scrollToId('top')">
+                <span class="text-accent">&lt;Clark</span><span class="text-neutral-500">Martinez.dev/&gt;</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-xs font-medium text-neutral-500 dark:text-neutral-400">
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#life" class="hover:text-accent transition-colors">Life</a>
+                <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
+                <a href="#certs" class="hover:text-accent transition-colors">Certs</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-semibold uppercase tracking-wide">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Available
+                </span>
+                <button onclick="toggleTheme()" id="theme-toggle" class="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-accent transition-all">
+                    <span class="dark:hidden">🌙</span>
+                    <span class="hidden dark:inline">☀️</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="section-container">
+        <div class="space-y-6">
+            <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase">Full Stack Developer · Pililla, Rizal, PH</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9]">
+                Hello, I'm <br>
+                <span class="text-accent">Clark Danielle Martinez</span>
+            </h1>
+            <p class="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
+                BS Information Technology graduate from San Beda College Alabang. Passionate about full-stack development, AI-assisted coding, and building real-world solutions from scratch.
+            </p>
+
+            <div class="flex flex-wrap gap-8 py-4">
+                <div class="flex flex-col">
+                    <span class="text-3xl font-bold text-accent">20</span>
+                    <span class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Certifications</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-bold text-accent">1y 3m</span>
+                    <span class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Total Exp.</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-bold text-accent">7+</span>
+                    <span class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Languages</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-bold text-accent">2026</span>
+                    <span class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Graduate</span>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+                <span class="badge border-accent/30 text-accent bg-accent/5">React.js</span>
+                <span class="badge border-accent/30 text-accent bg-accent/5">PHP / MySQL</span>
+                <span class="badge border-accent/30 text-accent bg-accent/5">Python</span>
+                <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900">Java</span>
+                <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900">JavaScript ES6+</span>
+                <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900">C#</span>
+                <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900">Git / GitHub</span>
+                <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900">Azure</span>
+                <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900">Networking</span>
+            </div>
+
+            <div class="flex flex-wrap gap-4 pt-4">
+                <button onclick="toggleChat()" class="px-6 py-3 bg-accent hover:bg-accent-dark text-white rounded-xl font-semibold transition-all shadow-lg shadow-accent/20 flex items-center gap-2">
+                    <span>🤖</span> Clark's AI Assistant
+                </button>
+                <a href="#contact" class="px-6 py-3 border border-neutral-200 dark:border-neutral-800 hover:border-accent rounded-xl font-semibold transition-all">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-container border-t border-neutral-200 dark:border-neutral-800">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <div>
+                    <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Who I Am</span>
+                    <h2 class="text-3xl font-bold tracking-tight mt-2">About <span class="text-neutral-500">Me</span></h2>
+                </div>
+                <div class="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    <p>Highly motivated <strong class="text-neutral-900 dark:text-neutral-100">IT graduate</strong> with a passion for transforming ideas into functional software. I specialize in full-stack development, having built production systems using <strong class="text-neutral-900 dark:text-neutral-100">React, PHP, and MySQL</strong>.</p>
+                    <p>During my internship at <strong class="text-neutral-900 dark:text-neutral-100">SupSoft Tech</strong>, I developed the "InTurn" management system from scratch, handled complex Git workflows, and deployed live applications on Hostinger.</p>
+                    <p>I also hold <strong class="text-neutral-900 dark:text-neutral-100">20 industry certifications</strong> spanning Microsoft Azure, Cisco Networking, CompTIA, and Certiport — demonstrating a broad, verified technical foundation.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900 lowercase italic">⚽ Football</span>
+                    <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900 lowercase italic">💻 Programming</span>
+                    <span class="badge border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:bg-neutral-900 lowercase italic">🏍️ Riding</span>
+                </div>
+            </div>
+            
+            <div class="glass-card p-8 flex flex-col justify-center">
+                <div class="space-y-4 divide-y divide-neutral-100 dark:divide-neutral-800">
+                    <div class="flex justify-between py-2"><span class="text-xs text-neutral-500 uppercase tracking-widest">Education</span><span class="text-sm font-medium">BS IT</span></div>
+                    <div class="flex justify-between py-2"><span class="text-xs text-neutral-500 uppercase tracking-widest">School</span><span class="text-sm font-medium">San Beda College Alabang</span></div>
+                    <div class="flex justify-between py-2"><span class="text-xs text-neutral-500 uppercase tracking-widest">Graduated</span><span class="text-sm font-medium">2022 – 2026</span></div>
+                    <div class="flex justify-between py-2"><span class="text-xs text-neutral-500 uppercase tracking-widest">Email</span><span class="text-[10px] md:text-sm font-medium">clark13martinez@icloud.com</span></div>
+                    <div class="flex justify-between py-2"><span class="text-xs text-neutral-500 uppercase tracking-widest">Location</span><span class="text-sm font-medium">Pililla, Rizal, PH</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIFE SECTION -->
+    <section id="life" class="section-container border-t border-neutral-200 dark:border-neutral-800">
+        <div class="space-y-12">
+            <div class="text-center">
+                <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Behind the Screen</span>
+                <h2 class="text-3xl font-bold tracking-tight mt-2">Life <span class="text-neutral-500">& Interests</span></h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="aspect-square glass-card overflow-hidden group cursor-pointer" onclick="openLightbox('images/motor.jpg')">
+                    <img src="images/motor.jpg" alt="Motorcycle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100">
+                </div>
+                <div class="aspect-square glass-card overflow-hidden group cursor-pointer" onclick="openLightbox('images/field.jpg')">
+                    <img src="images/field.jpg" alt="Nature and Fields" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100">
+                </div>
+                <div class="aspect-square glass-card overflow-hidden group cursor-pointer" onclick="openLightbox('images/grad.jpg')">
+                    <img src="images/grad.jpg" alt="Graduation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100">
+                </div>
+                <div class="aspect-square glass-card overflow-hidden group cursor-pointer" onclick="openLightbox('images/code.jpg')">
+                    <img src="images/code.jpg" alt="Coding Work" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100">
+                </div>
+                <div class="aspect-square glass-card overflow-hidden group cursor-pointer" onclick="openLightbox('images/puppy.jpg')">
+                    <img src="images/puppy.jpg" alt="Puppy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100">
+                </div>
+                <div class="aspect-square glass-card overflow-hidden group cursor-pointer" onclick="openLightbox('images/code2.jpg')">
+                    <img src="images/code2.jpg" alt="Code Collaboration" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100">
+                </div>
+            </div>
+            
+            <p class="text-center text-xs text-neutral-500 italic">
+                A glimpse into my life outside of code — from the football pitch to the open road.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section-container border-t border-neutral-200 dark:border-neutral-800">
+        <div class="space-y-12">
+            <div class="text-center">
+                <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Expertise</span>
+                <h2 class="text-3xl font-bold tracking-tight mt-2">Technical <span class="text-neutral-500">Skills</span></h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Languages -->
+                <div class="glass-card p-6 hover:border-accent group">
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Languages</span>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+                        Java · JavaScript ES6+ · PHP · Python · C# · SQL · HTML5 · CSS3
+                    </p>
+                </div>
+                <!-- Frameworks -->
+                <div class="glass-card p-6 hover:border-accent group">
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Frameworks</span>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+                        React.js · Pandas · Matplotlib
+                    </p>
+                </div>
+                <!-- Database -->
+                <div class="glass-card p-6 hover:border-accent group">
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Database</span>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+                        MySQL · Relational Design · Query Optimization
+                    </p>
+                </div>
+                <!-- Dev Tools -->
+                <div class="glass-card p-6 hover:border-accent group">
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Dev Tools</span>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+                        Git · GitHub · VS Code · CLI
+                    </p>
+                </div>
+                <!-- Cloud -->
+                <div class="glass-card p-6 hover:border-accent group">
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Cloud / Infra</span>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+                        Azure AI · Azure Data · Power Platform
+                    </p>
+                </div>
+                <!-- Deployment -->
+                <div class="glass-card p-6 hover:border-accent group">
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Deployment</span>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+                        Hostinger · Hosting Config · Migration
+                    </p>
+                </div>
+                <!-- Problems -->
+                <div class="glass-card p-6 hover:border-accent group md:col-span-2">
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Problem Solving</span>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors">
+                        API Debugging · Submodule Management · Merge Conflict Resolution · DataFrames
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section-container border-t border-neutral-200 dark:border-neutral-800">
+        <div class="space-y-12">
+            <div class="text-center">
+                <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Showcase</span>
+                <h2 class="text-3xl font-bold tracking-tight mt-2">Featured <span class="text-neutral-500">Project</span></h2>
+            </div>
+
+            <div class="flex justify-center">
+                <!-- Project 1 -->
+                <a href="inturninterface/InTurn/vanilla-html/index.html" class="group space-y-4 block max-w-sm w-full">
+                    <div class="aspect-square glass-card overflow-hidden bg-neutral-900 flex items-center justify-center p-8">
+                        <img src="inturninterface/InTurn/public/logo-light.png" alt="InTurn System" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-lg group-hover:text-accent transition-colors">InTurn Management System</h3>
+                        <p class="text-xs text-neutral-500 uppercase tracking-widest mt-1">Full Stack Development</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section-container border-t border-neutral-200 dark:border-neutral-800">
+        <div class="space-y-12">
+            <div>
+                <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Background</span>
+                <h2 class="text-3xl font-bold tracking-tight mt-2">Work <span class="text-neutral-500">Experience</span></h2>
+                <div class="flex items-center gap-2 mt-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-widest">3 Months Relevant Industry Experience</span>
+                </div>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Exp 1 -->
+                <div class="grid md:grid-cols-[160px_1fr] gap-8">
+                    <div class="space-y-2">
+                        <span class="text-sm font-bold">Jan 2026 – May 2026</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold">Full Stack Developer Intern</h3>
+                            <p class="text-accent font-medium text-sm">SupSoft Tech</p>
+                        </div>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                            Built the "InTurn" management system from the ground up — React dashboards on the frontend, PHP/MySQL powering the backend. Handled advanced Git/GitHub workflows including repository migrations and submodule management. Deployed live web applications on Hostinger with stable API integrations and performance monitoring.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge border-accent/20 text-accent bg-accent/5">React.js</span>
+                            <span class="badge border-accent/20 text-accent bg-accent/5">PHP</span>
+                            <span class="badge border-accent/20 text-accent bg-accent/5">MySQL</span>
+                            <span class="badge border-accent/20 text-accent bg-accent/5">Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="grid md:grid-cols-[160px_1fr] gap-8">
+                    <div class="space-y-2">
+                        <span class="text-sm font-bold">2020 – 2021</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold">Data Specialist</h3>
+                            <p class="text-accent font-medium text-sm">Woflow Inc.</p>
+                        </div>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                            Collaborated with team leaders and managers to meet production targets. Performed data structuring and standardization using proprietary tools. Participated in quality assurance and training initiatives, maintained effective team communication, and identified process improvement opportunities.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge border-accent/20 text-accent bg-accent/5">Data Structuring</span>
+                            <span class="badge border-accent/20 text-accent bg-accent/5">Quality Assurance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certs" class="section-container border-t border-neutral-200 dark:border-neutral-800">
+        <div class="space-y-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Credentials</span>
+                    <h2 class="text-3xl font-bold tracking-tight mt-2">Certifications <span class="text-neutral-500">· 20 Total</span></h2>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="text" id="cert-search" oninput="filterCerts()" placeholder="Search credentials..." class="px-4 py-2 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg text-xs outline-none focus:border-accent transition-colors">
+                    <select id="cert-filter" onchange="filterCerts()" class="px-4 py-2 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg text-xs outline-none focus:border-accent transition-colors">
+                        <option value="all">All Issuers</option>
+                        <option value="Cisco">Cisco</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="Certiport">Certiport</option>
+                        <option value="CompTIA">CompTIA</option>
+                        <option value="PMI">PMI</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="certs-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <!-- Will be populated by JS -->
+            </div>
+
+            <div class="text-center pt-8">
+                <a href="https://www.credly.com/users/clark-danielle-martinez/edit#credly" target="_blank" class="text-sm font-semibold text-accent hover:underline flex items-center justify-center gap-1">
+                    View full profile on Credly ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-container border-t border-neutral-200 dark:border-neutral-800">
+        <div class="space-y-12">
+            <div class="text-center">
+                <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Let's Connect</span>
+                <h2 class="text-3xl font-bold tracking-tight mt-2">Get In <span class="text-neutral-500">Touch</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-xl shrink-0">📧</div>
+                    <div>
+                        <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Email</span>
+                        <p class="text-sm font-semibold mt-1">clark13martinez@icloud.com</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-xl shrink-0">📞</div>
+                    <div>
+                        <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Phone</span>
+                        <p class="text-sm font-semibold mt-1">0977-383-2767</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-xl shrink-0">📍</div>
+                    <div>
+                        <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Location</span>
+                        <p class="text-sm font-semibold mt-1">Pililla, Rizal, Philippines</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 flex items-start gap-4 hover:border-accent cursor-pointer group" onclick="toggleChat()">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-xl shrink-0 group-hover:bg-accent group-hover:text-white transition-all">🤖</div>
+                    <div>
+                        <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">AI Assistant</span>
+                        <p class="text-sm font-semibold mt-1 text-accent">Ask Clark's AI →</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-12 text-center">
+        <div class="section-container !py-0 space-y-4">
+            <div class="text-sm font-bold tracking-tight">
+                <span class="text-accent">&lt;Clark</span><span class="text-neutral-500">Martinez.dev/&gt;</span>
+            </div>
+            <p class="text-[10px] text-neutral-500 uppercase tracking-[0.2em]">
+                © 2026 Clark Danielle Martinez · All rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="fixed inset-0 z-[110] bg-black/90 flex items-center justify-center p-6 opacity-0 pointer-events-none transition-all duration-300" onclick="closeLightbox()">
+        <div class="max-w-4xl w-full flex justify-center">
+            <img id="lightbox-img" src="" alt="Large view" class="max-h-[80vh] w-auto rounded-xl shadow-2xl border border-white/10">
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const CERTS = [
+            { name: "CompTIA IT Fundamentals+ (ITF+)", issuer: "CompTIA", date: "Mar 2023", icon: "🔵" },
+            { name: "Networking, Security & Automation", issuer: "Cisco", date: "Jun 2025", icon: "🟠" },
+            { name: "CCNA: Introduction to Networks", issuer: "Cisco", date: "Jul 2024", icon: "🟠" },
+            { name: "CCNA: Switching, Routing & Wireless", issuer: "Cisco", date: "Jan 2025", icon: "🟠" },
+            { name: "Data Science Essentials with Python", issuer: "Cisco", date: "May 2026", icon: "🟠" },
+            { name: "Junior Cyber Security Analyst", issuer: "Cisco", date: "Jan 2025", icon: "🟠" },
+            { name: "IT Specialist – Databases", issuer: "Certiport", date: "May 2024", icon: "🟡" },
+            { name: "IT Specialist – Java", issuer: "Certiport", date: "May 2024", icon: "🟡" },
+            { name: "IT Specialist – Python", issuer: "Certiport", date: "May 2024", icon: "🟡" },
+            { name: "IT Specialist – Networking", issuer: "Certiport", date: "May 2024", icon: "🟡" },
+            { name: "IT Specialist – Software Development", issuer: "Certiport", date: "May 2024", icon: "🟡" },
+            { name: "IT Specialist – Artificial Intelligence", issuer: "Certiport", date: "May 2026", icon: "🟡" },
+            { name: "Microsoft 365 Certified: Fundamentals", issuer: "Microsoft", date: "Nov 2024", icon: "🔷" },
+            { name: "Azure AI Fundamentals", issuer: "Microsoft", date: "Nov 2024", icon: "🔷" },
+            { name: "Azure Data Fundamentals", issuer: "Microsoft", date: "Nov 2024", icon: "🔷" },
+            { name: "Azure Fundamentals", issuer: "Microsoft", date: "Apr 2025", icon: "🔷" },
+            { name: "Dynamics 365 Fundamentals (CRM)", issuer: "Microsoft", date: "Apr 2025", icon: "🔷" },
+            { name: "Dynamics 365 Fundamentals (ERP)", issuer: "Microsoft", date: "Apr 2025", icon: "🔷" },
+            { name: "Power Platform Fundamentals", issuer: "Microsoft", date: "Apr 2025", icon: "🔷" },
+            { name: "PMI Project Management Ready", issuer: "PMI", date: "May 2026", icon: "🟢" }
+        ];
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lb.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function scrollToId(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function filterCerts() {
+            const search = document.getElementById('cert-search').value.toLowerCase();
+            const filter = document.getElementById('cert-filter').value;
+            const grid = document.getElementById('certs-grid');
+            
+            const filtered = CERTS.filter(c => {
+                const matchesSearch = c.name.toLowerCase().includes(search);
+                const matchesFilter = filter === 'all' || c.issuer === filter;
+                return matchesSearch && matchesFilter;
+            });
+
+            grid.innerHTML = filtered.map(c => `
+                <div class="glass-card p-4 flex gap-3 items-start group hover:border-accent">
+                    <span class="text-lg shrink-0 mt-1">${c.icon}</span>
+                    <div class="space-y-1">
+                        <h4 class="text-[11px] font-bold leading-tight group-hover:text-accent transition-colors">${c.name}</h4>
+                        <p class="text-[10px] text-neutral-500">${c.issuer} · ${c.date}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        let chatOpen = false;
+        function toggleChat() {
+            chatOpen = !chatOpen;
+            const win = document.getElementById('chat-win');
+            if (chatOpen) {
+                win.classList.remove('translate-y-4', 'opacity-0', 'pointer-events-none');
+            } else {
+                win.classList.add('translate-y-4', 'opacity-0', 'pointer-events-none');
+            }
+        }
+
+        async function sendMsg() {
+            const inp = document.getElementById('chat-input');
+            const txt = inp.value.trim();
+            if (!txt) return;
+            inp.value = '';
+            
+            const box = document.getElementById('chat-msgs');
+            box.innerHTML += `<div class="bg-accent text-white p-2 rounded-lg self-end ml-auto max-w-[80%]">${txt}</div>`;
+            
+            setTimeout(() => {
+                box.innerHTML += `<div class="bg-neutral-100 dark:bg-neutral-800 p-2 rounded-lg mr-auto max-w-[80%]">I'm Clark's AI Assistant. How can I help you learn more about his skills?</div>`;
+                box.scrollTop = box.scrollHeight;
+            }, 600);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            filterCerts();
+            if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
